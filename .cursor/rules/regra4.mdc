@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Regra 4: Eficiência e Performance como Padrão Inegociável
+
+O sistema deve ser projetado para oferecer respostas rápidas, interações suaves e uso otimizado de recursos, mesmo em dispositivos com hardware modesto ou conexões de rede limitadas. Cada tela, componente e requisição deve ser analisado com foco em desempenho e tempo de resposta.
+
+No front-end, evite renderizações desnecessárias utilizando técnicas como memoização de componentes (React.memo, useMemo, useCallback) e divisão de código (code splitting) para carregar apenas o que for necessário. Prefira listas virtualizadas (react-window, FlatList, etc.) em exibições com muitos itens e imagens otimizadas para carregamento progressivo.
+No back-end, garanta que as queries sejam eficientes, use indexação adequada no banco de dados, e implemente paginação, filtros e cache sempre que o volume de dados justificar. Avalie o uso de CDN para ativos estáticos e compressão de payloads nas APIs (ex: GZIP).
+
+Evite chamadas de rede duplicadas ou desnecessárias. Prefira requisições assíncronas com fallback de cache local, e garanta que o app continue utilizável mesmo durante carregamentos parciais.
+
+Animações devem ser sutis e com FPS estável, sem travamentos. Qualquer gargalo de performance detectado em testes deve ser tratado com prioridade alta, pois impacta diretamente a experiência e retenção de usuários.

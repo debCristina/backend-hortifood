@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Regra 1: Foco na Experiência do Usuário de Alta Qualidade e Centrada no Cliente Final e no Feirante
+
+O aplicativo deve oferecer uma experiência de compra excepcionalmente simples, confiável e agradável para o consumidor, ao mesmo tempo em que facilita a operação do vendedor local (feirante, quitandeiro ou pequeno comerciante). Desde a escolha dos produtos até a finalização do pedido, todas as interações devem ser intuitivas, rápidas e fornecer valor imediato e visível.
+
+A interface deve exibir os produtos de forma visualmente atraente, com imagens de alta qualidade, nomes claros e informações relevantes como preço por quilo/unidade, origem e disponibilidade. A navegação deve ser fluida, com respostas visuais instantâneas a todas as ações do usuário (como adicionar ao carrinho, favoritar ou buscar produtos).
+
+O app deve se adaptar dinamicamente às preferências do sistema (modo escuro/claro, tamanho de texto, acessibilidade), garantindo conforto visual e inclusão. Todo o fluxo de compra, rastreamento e comunicação com o vendedor deve estar livre de fricções.
+
+Além disso, os dados essenciais (carrinho, favoritos, histórico recente) devem estar disponíveis mesmo sem conexão com a internet, com sincronização automática assim que possível.

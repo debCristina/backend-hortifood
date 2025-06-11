@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Regra 3: Modularidade e Evolução Contínua como Estrutura de Crescimento Sustentável
+
+A arquitetura do sistema deve ser construída com base em módulos independentes e bem definidos, permitindo crescimento, manutenção e testes de forma ágil e segura. Cada responsabilidade – como gerenciamento de produtos, carrinho, pagamentos, pedidos, usuários, entregas e avaliações – deve estar isolada em seu próprio domínio lógico, facilitando a escalabilidade e o reaproveitamento de código.
+
+No front-end, utilize pastas e arquivos que reflitam a separação por domínio (ex: features/orders, features/products, components/shared, services/api), aplicando padrões como MVVM ou Atomic Design, quando aplicável.
+No back-end, estruture o código com separação clara entre rotas, controladores, serviços e repositórios, respeitando os princípios SOLID e favorecendo injeção de dependência e testabilidade.
+
+Novas funcionalidades devem poder ser adicionadas sem impacto significativo no restante da base. Regras de negócio devem estar desacopladas da UI, e a lógica deve ser testada de forma automatizada sempre que possível.
+
+Além disso, mudanças futuras como suporte a múltiplos idiomas, mais métodos de pagamento, novos tipos de entrega (ex: retirada no local) ou campanhas promocionais devem ser previstas desde o início como possibilidades naturais de evolução.

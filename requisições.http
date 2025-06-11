@@ -1,0 +1,267 @@
+# # AUTENTICAÇÃO
+# POST http://localhost:3000/api/auth/login
+# Content-Type: application/json
+
+# {
+#   "email": "usuario@email.com",
+#   "password": "123456"
+# }
+
+# ###
+# POST http://localhost:3000/api/auth/register
+# Content-Type: application/json
+
+# {
+#   "type": "user",
+#   "name": "Fulano",
+#   "email": "fulano@email.com",
+#   "password": "senha123"
+# }
+
+# ###
+# GET http://localhost:3000/api/auth/me
+# Authorization: Bearer {{token}}
+
+# ###
+# POST http://localhost:3000/api/auth/refresh
+# Content-Type: application/json
+
+# {
+#   "refreshToken": "{{refresh_token}}"
+# }
+
+# # USUÁRIOS
+# ###
+# POST http://localhost:3000/api/users
+# Content-Type: application/json
+
+# {
+#   "name": "Usuário",
+#   "email": "email@email.com",
+#   "password": "123456"
+# }
+
+# ###
+# GET http://localhost:3000/api/users
+# Authorization: Bearer {{token}}
+
+# ###
+# GET http://localhost:3000/api/users/123
+# Authorization: Bearer {{token}}
+
+# ###
+# PATCH http://localhost:3000/api/users/123
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "name": "Novo Nome"
+# }
+
+# ###
+# DELETE http://localhost:3000/api/users/123
+# Authorization: Bearer {{token}}
+
+# # HORTIFRUITS
+# ###
+# POST http://localhost:3000/api/hortifruits
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "name": "Horti do João",
+#   "description": "Frutas frescas"
+# }
+
+# ###
+# GET http://localhost:3000/api/hortifruits
+
+# ###
+# GET http://localhost:3000/api/hortifruits/nearby?lat=-23.55&lng=-46.63
+
+# ###
+# GET http://localhost:3000/api/hortifruits/321
+
+# ###
+# PATCH http://localhost:3000/api/hortifruits/321
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "description": "Atualizado"
+# }
+
+# ###
+# DELETE http://localhost:3000/api/hortifruits/321
+# Authorization: Bearer {{token}}
+
+# ###
+# PATCH http://localhost:3000/api/hortifruits/321/status
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "status": "active"
+# }
+
+# ###
+# POST http://localhost:3000/api/hortifruits/321/ratings
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "rating": 5,
+#   "comment": "Excelente atendimento"
+# }
+
+# # PRODUTOS
+# ###
+# POST http://localhost:3000/api/products
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "name": "Maçã",
+#   "price": 5.50,
+#   "unit": "kg",
+#   "categoryId": "abc123",
+#   "hortifruitId": "321"
+# }
+
+# ###
+# GET http://localhost:3000/api/products/hortifruit/321
+
+# ###
+# GET http://localhost:3000/api/products/789
+
+# ###
+# PUT http://localhost:3000/api/products/789
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "price": 4.99
+# }
+
+# ###
+# DELETE http://localhost:3000/api/products/789
+# Authorization: Bearer {{token}}
+
+# ###
+# PATCH http://localhost:3000/api/products/789/toggle-availability
+# Authorization: Bearer {{token}}
+
+# ###
+# PATCH http://localhost:3000/api/products/789/toggle-featured
+# Authorization: Bearer {{token}}
+
+# # CATEGORIAS
+# ###
+# POST http://localhost:3000/api/categories
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "name": "Frutas"
+# }
+
+# ###
+# GET http://localhost:3000/api/categories
+
+# ###
+# GET http://localhost:3000/api/categories/popular
+
+# ###
+# GET http://localhost:3000/api/categories/abc123
+
+# ###
+# PUT http://localhost:3000/api/categories/abc123
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "name": "Verduras"
+# }
+
+# ###
+# DELETE http://localhost:3000/api/categories/abc123
+# Authorization: Bearer {{token}}
+
+# ###
+# DELETE http://localhost:3000/api/categories/abc123/soft
+# Authorization: Bearer {{token}}
+
+# # ENDEREÇOS
+# ###
+# POST http://localhost:3000/api/addresses
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "street": "Rua das Laranjeiras",
+#   "number": "123",
+#   "city": "São Paulo",
+#   "state": "SP",
+#   "zip": "01234-567"
+# }
+
+# ###
+# GET http://localhost:3000/api/addresses
+# Authorization: Bearer {{token}}
+
+# ###
+# GET http://localhost:3000/api/addresses/abc123
+# Authorization: Bearer {{token}}
+
+# ###
+# PATCH http://localhost:3000/api/addresses/abc123
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "street": "Rua Alterada"
+# }
+
+# ###
+# DELETE http://localhost:3000/api/addresses/abc123
+# Authorization: Bearer {{token}}
+
+# ###
+# PATCH http://localhost:3000/api/addresses/abc123/default
+# Authorization: Bearer {{token}}
+
+# # CARRINHO
+# ###
+# GET http://localhost:3000/api/carts
+# Authorization: Bearer {{token}}
+
+# ###
+# POST http://localhost:3000/api/carts/items
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "productId": "789",
+#   "quantity": 2
+# }
+
+# ###
+# PUT http://localhost:3000/api/carts/items/item123
+# Authorization: Bearer {{token}}
+# Content-Type: application/json
+
+# {
+#   "quantity": 1
+# }
+
+# ###
+# DELETE http://localhost:3000/api/carts/items/item123
+# Authorization: Bearer {{token}}
+
+# ###
+# POST http://localhost:3000/api/carts/checkout/999
+# Authorization: Bearer {{token}}
+
+# ###
+# DELETE http://localhost:3000/api/carts/clear
+# Authorization: Bearer {{token}}
